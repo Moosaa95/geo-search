@@ -1,0 +1,91 @@
+.section--one {
+    margin: 20px 0px 20px;
+}
+
+.section--one .cities {
+    display: grid;
+    grid-gap: 20px 15px;
+    grid-template-columns: 1fr;
+}
+
+.city-conditions {
+    position: relative;
+    padding: 40px 40px;
+    border-radius: 20px;
+    background: var(--text__light);
+    color: var(--text__med);
+}
+
+.city-conditions::before {
+    content: '';
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    top: -12px;
+    left: 5%;
+    z-index: -1;
+    opacity: .3;
+    border-radius: 20px;
+    background: var(--text__light);
+}
+
+.city-conditions::after {
+    content: '';
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    bottom: -12px;
+    left: 5%;
+    z-index: -1;
+    opacity: .3;
+    border-radius: 20px;
+    background: var(--text__light);
+}
+
+.section--one figcaption {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.section--one .city-temp {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text__dark);
+}
+
+.section--one .city-conditions .city-name sup {
+    display: block;
+    font-size: .5em;
+    font-weight: bold;
+}
+
+.section--one .city-conditions sup {
+    font-size: .5em;
+    padding: 0.2em 0.6em;
+    border-radius: 30px;
+    color: var(--text__light);
+    background: var(--orange);
+}
+
+@media screen and (min-width:500px) {
+    .heading {
+        font-size: 3rem;
+    }
+    form {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .input {
+        font-size: 2.3rem;
+        height: 60px;
+        padding: 5px 5px 10px;
+    }
+    .section--one .cities {
+        grid-gap: 20px 15px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
